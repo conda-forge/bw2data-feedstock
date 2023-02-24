@@ -1,5 +1,5 @@
 {% set name = "bw2data" %}
-{% set version = "3.6.5" %}
+{% set version = "3.6.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6a03315b0daf5acb6a88d93bbe8c3a5a0fcaa7ee7edb982f2817f0af6d18dad6
+  sha256: 3ce1f7b9242f0daa7762e4f98588af3acd5b921530713957a1edabbfd2579453
 
 build:
   noarch: python
@@ -53,7 +53,7 @@ test:
 
 about:
   home: https://github.com/brightway-lca/brightway2-data
-  summary: 'Tools for the management of inventory databases and impact assessment methods. Part of the Brightway2 LCA Framework.'
+  summary: Tools for the management of inventory databases and impact assessment methods. Part of the Brightway2 LCA Framework.
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt

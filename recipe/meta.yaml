@@ -1,5 +1,5 @@
 {% set name = "bw2data" %}
-{% set version = "3.6.6" %}
+{% set version = "4.0.dev21" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3ce1f7b9242f0daa7762e4f98588af3acd5b921530713957a1edabbfd2579453
+  sha256: 41188a5ed32908ed6a442418689918c988ba289deede118d238f0e79cd52dabb
 
 build:
   noarch: python
@@ -22,22 +22,17 @@ requirements:
     - pip
     - setuptools
   run:
-    - appdirs
     - bw2parameters
-    - docopt
-    - eight
-    - fasteners
-    - future
+    - bw_processing
     - lxml
     - numpy
     - peewee >=3.9.4
-    - psutil
-    - pyprind
-    - python >=3.4
+    - platformdirs
+    - python >=3.5
     - requests >=1.1.0
     - scipy
     - stats_arrays
-    - unicodecsv
+    - tqdm
     - voluptuous
     - whoosh
     - wrapt

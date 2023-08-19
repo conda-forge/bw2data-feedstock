@@ -22,22 +22,17 @@ requirements:
     - pip
     - setuptools
   run:
-    - appdirs
     - bw2parameters
-    - docopt
-    - eight
-    - fasteners
-    - future
+    - bw_processing
     - lxml
     - numpy
     - peewee >=3.9.4
-    - psutil
-    - pyprind
-    - python >=3.4
+    - platformdirs
+    - python >=3.5
     - requests >=1.1.0
     - scipy
     - stats_arrays
-    - unicodecsv
+    - tqdm
     - voluptuous
     - whoosh
     - wrapt

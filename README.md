@@ -1,11 +1,11 @@
-About bw2data
-=============
+About bw2data-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bw2data-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/brightway-lca/brightway2-data
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bw2data-feedstock/blob/main/LICENSE.txt)
 
 Summary: Tools for the management of inventory databases and impact assessment methods. Part of the Brightway2 LCA Framework.
 
@@ -147,4 +147,5 @@ Feedstock Maintainers
 
 * [@cmutel](https://github.com/cmutel/)
 * [@m-rossi](https://github.com/m-rossi/)
+* [@michaelweinold](https://github.com/michaelweinold/)
 

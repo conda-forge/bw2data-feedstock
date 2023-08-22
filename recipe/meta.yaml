@@ -1,5 +1,5 @@
 {% set name = "bw2data" %}
-{% set version = "4.0.dev21" %}
+{% set version = "4.0.dev23" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 41188a5ed32908ed6a442418689918c988ba289deede118d238f0e79cd52dabb
+  sha256: 1a4184c348522880258e5c75234faf8ff03802e3d19f4153f6af3c557712d7eb
 
 build:
   noarch: python
@@ -18,7 +18,7 @@ build:
 
 requirements:
   host:
-    - python >=3.4
+    - python >=3.9
     - pip
     - setuptools
   run:
@@ -28,7 +28,7 @@ requirements:
     - numpy
     - peewee >=3.9.4
     - platformdirs
-    - python >=3.5
+    - python >=3.9
     - requests >=1.1.0
     - scipy
     - stats_arrays

@@ -26,6 +26,7 @@ requirements:
     - scipy
     - numpy
     - peewee >=3.9.4
+    - lxml
     - platformdirs
     - tqdm
     - voluptuous

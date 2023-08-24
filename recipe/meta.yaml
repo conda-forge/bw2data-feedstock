@@ -1,5 +1,5 @@
 {% set name = "bw2data" %}
-{% set version = "4.0.dev21" %}
+{% set version = "4.0.dev25" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 41188a5ed32908ed6a442418689918c988ba289deede118d238f0e79cd52dabb
+  sha256: 6fd3f9e1631ebc47cd98e7569cc35aa42d2fab6303078dfd9b77626a9a295678
 
 build:
   noarch: python
@@ -18,24 +18,23 @@ build:
 
 requirements:
   host:
-    - python >=3.4
+    - python >=3.9
     - pip
     - setuptools
   run:
-    - bw2parameters
-    - bw_processing
-    - lxml
+    - python >=3.9
+    - scipy
     - numpy
     - peewee >=3.9.4
+    - lxml
     - platformdirs
-    - python >=3.5
-    - requests >=1.1.0
-    - scipy
-    - stats_arrays
     - tqdm
     - voluptuous
     - whoosh
     - wrapt
+    - bw2parameters
+    - bw_processing
+    - stats_arrays
 
 test:
   imports:

@@ -22,19 +22,19 @@ requirements:
     - pip
     - setuptools
   run:
-    - bw2parameters
-    - bw_processing
-    - lxml
+    - python >=3.9
+    - scipy
     - numpy
     - peewee >=3.9.4
     - platformdirs
-    - python >=3.9
-    - scipy
-    - stats_arrays
     - tqdm
     - voluptuous
     - whoosh
     - wrapt
+    - bw2parameters
+    - bw_processing
+    - bw-projects >=2.1.0
+    - stats_arrays
 
 test:
   imports:

@@ -33,7 +33,6 @@ requirements:
     - wrapt
     - bw2parameters
     - bw_processing
-    - bw-projects >=2.1.0
     - stats_arrays
 
 test:

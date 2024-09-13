@@ -34,14 +34,14 @@ Current release info
 Installing bw2data
 ==================
 
-Installing `bw2data` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `bw2data` from the `conda-forge/label/bw2data_dev` channel can be achieved by adding `conda-forge/label/bw2data_dev` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/bw2data_dev
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `bw2data` can be installed with `conda`:
+Once the `conda-forge/label/bw2data_dev` channel has been enabled, `bw2data` can be installed with `conda`:
 
 ```
 conda install bw2data
@@ -56,26 +56,26 @@ mamba install bw2data
 It is possible to list all of the versions of `bw2data` available on your platform with `conda`:
 
 ```
-conda search bw2data --channel conda-forge
+conda search bw2data --channel conda-forge/label/bw2data_dev
 ```
 
 or with `mamba`:
 
 ```
-mamba search bw2data --channel conda-forge
+mamba search bw2data --channel conda-forge/label/bw2data_dev
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search bw2data --channel conda-forge
+mamba repoquery search bw2data --channel conda-forge/label/bw2data_dev
 
 # List packages depending on `bw2data`:
-mamba repoquery whoneeds bw2data --channel conda-forge
+mamba repoquery whoneeds bw2data --channel conda-forge/label/bw2data_dev
 
 # List dependencies of `bw2data`:
-mamba repoquery depends bw2data --channel conda-forge
+mamba repoquery depends bw2data --channel conda-forge/label/bw2data_dev
 ```
 
 
@@ -97,7 +97,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance

@@ -25,11 +25,11 @@ requirements:
     - python >=3.9
     - blinker
     - bw2parameters
-    - bw_processing>=0.9.5
+    - bw_processing >=0.9.5
     - fsspec
     - lxml
-    - numpy<2
-    - peewee>=3.9.4
+    - numpy <2
+    - peewee >=3.9.4
     - platformdirs
     - pydantic-settings
     - rapidfuzz; sys_platform != 'emscripten'

@@ -32,7 +32,7 @@ requirements:
     - peewee >=3.9.4
     - platformdirs
     - pydantic-settings
-    - rapidfuzz; sys_platform != 'emscripten'
+    - rapidfuzz
     - scipy
     - stats_arrays
     - tqdm

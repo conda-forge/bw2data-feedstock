@@ -18,7 +18,7 @@ build:
 
 requirements:
   host:
-    - python >=3.4
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
@@ -33,7 +33,7 @@ requirements:
     - peewee >=3.9.4
     - psutil
     - pyprind
-    - python >=3.4
+    - python >={{ python_min }}
     - requests >=1.1.0
     - scipy
     - stats_arrays
@@ -47,6 +47,7 @@ test:
     - bw2data
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
     # No test of bw2-uptodate as no --help or --version available

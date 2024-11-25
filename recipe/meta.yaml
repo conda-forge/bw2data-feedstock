@@ -22,24 +22,26 @@ requirements:
     - pip
     - setuptools
   run:
-    - appdirs
+    - blinker
+    - bw_processing >=0.9.5
     - bw2parameters
-    - docopt
-    - eight
-    - fasteners
-    - future
+    - deepdiff >=7.0.1,<7.1
+    - deprecated
+    - fsspec
     - lxml
-    - numpy
+    - numpy <2
     - peewee >=3.9.4
-    - psutil
-    - pyprind
-    - python >={{ python_min }}
-    - requests >=1.1.0
+    - pint <0.24
+    - platformdirs
+    - pydantic-settings
+    - rapidfuzz
     - scipy
+    - snowflake-id >=1.0.2,<1.1
     - stats_arrays
-    - unicodecsv
+    - structlog
+    - tqdm
+    - typing_extensions
     - voluptuous
-    - whoosh
     - wrapt
 
 test:

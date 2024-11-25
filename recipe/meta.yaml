@@ -13,8 +13,6 @@ build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
-  entry_points:
-    - bw2-uptodate = bw2data.bin.bw2_uptodate:main
 
 requirements:
   host:
@@ -53,7 +51,6 @@ test:
     - python {{ python_min }}
   commands:
     - pip check
-    # No test of bw2-uptodate as no --help or --version available
 
 about:
   home: https://github.com/brightway-lca/brightway2-data

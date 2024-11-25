@@ -34,6 +34,7 @@ requirements:
     - pint <0.24
     - platformdirs
     - pydantic-settings
+    - python >={{ python_min }}
     - rapidfuzz
     - scipy
     - snowflake-id >=1.0.2,<1.1

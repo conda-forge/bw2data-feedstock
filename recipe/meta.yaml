@@ -1,45 +1,46 @@
 {% set name = "bw2data" %}
-{% set version = "3.6.6" %}
+{% set version = "4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3ce1f7b9242f0daa7762e4f98588af3acd5b921530713957a1edabbfd2579453
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 30ebf28a1fa50aed9aae4d61e0cced4918bc03e4412c15a504007d07c928e96d
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
-  entry_points:
-    - bw2-uptodate = bw2data.bin.bw2_uptodate:main
 
 requirements:
   host:
-    - python >=3.4
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - appdirs
+    - blinker
+    - bw_processing >=0.9.5
     - bw2parameters
-    - docopt
-    - eight
-    - fasteners
-    - future
+    - deepdiff >=7.0.1,<7.1
+    - deprecated
+    - fsspec
     - lxml
-    - numpy
+    - numpy <2
     - peewee >=3.9.4
-    - psutil
-    - pyprind
-    - python >=3.4
-    - requests >=1.1.0
+    - pint <0.24
+    - platformdirs
+    - pydantic-settings
+    - python >={{ python_min }}
+    - rapidfuzz
     - scipy
+    - snowflake-id >=1.0.2,<1.1
     - stats_arrays
-    - unicodecsv
+    - structlog
+    - tqdm
+    - typing_extensions
     - voluptuous
-    - whoosh
     - wrapt
 
 test:
@@ -47,16 +48,16 @@ test:
     - bw2data
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
-    # No test of bw2-uptodate as no --help or --version available
 
 about:
   home: https://github.com/brightway-lca/brightway2-data
   summary: Tools for the management of inventory databases and impact assessment methods. Part of the Brightway2 LCA Framework.
   license: BSD-3-Clause
   license_family: BSD
-  license_file: LICENSE.txt
+  license_file: LICENSE
   dev_url: https://github.com/brightway-lca/brightway2-data
 
 extra:

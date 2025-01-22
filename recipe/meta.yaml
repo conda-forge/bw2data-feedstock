@@ -29,7 +29,7 @@ requirements:
     - lxml
     - numpy <2
     - peewee >=3.9.4
-    - pint <0.24
+    - pint
     - platformdirs
     - pydantic-settings
     - python >={{ python_min }}

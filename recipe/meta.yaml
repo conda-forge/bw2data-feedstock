@@ -1,5 +1,5 @@
 {% set name = "bw2data" %}
-{% set version = "4.4.4" %}
+{% set version = "4.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ca69a41490d511c2e2f802bcf67a0edcea9bb95ad725c953f9848497eff753cd
+  sha256: cd4921fd4cf128d1386adf8f8fa1913769ff710886305e7141a2ca456220138d
 
 build:
   noarch: python
@@ -27,7 +27,7 @@ requirements:
     - deprecated
     - fsspec
     - lxml
-    - numpy <2
+    - numpy <3
     - peewee >=3.9.4
     - pint
     - platformdirs

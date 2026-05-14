@@ -1,13 +1,13 @@
 {% set name = "bw2data" %}
-{% set version = "4.6.2" %}
+{% set version = "4.7" %}
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e2ed09cb99755d3da640377013e9e77fb8683d9c9147c3fa64d894b80eabaa8f
+  sha256: 3798db3776ead63b63cbf88fd9051032bf6f7c0f03ddc7b11c8600dee51b4cd8
 
 build:
   noarch: python

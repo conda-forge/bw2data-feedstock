@@ -16,18 +16,19 @@ build:
 
 requirements:
   host:
-    - python ${{ python_min }}
     - pip
-    - setuptools
+    - python ${{ python_min }}.*
+    - setuptools >=68.0
   run:
     - blinker
-    - bw_processing >=0.9.5
+    - bw_processing >=1.6
     - bw2parameters
-    - deepdiff >=7.0.1,<7.1
+    - deepdiff >=8.6.2
     - deprecated
     - fsspec
     - lxml
     - numpy <3
+    - packaging
     - peewee >=4.0.1
     - pint
     - platformdirs
@@ -49,7 +50,7 @@ tests:
         - ${{ python_min }}.*
         - "*"
       imports:
-      - bw2data
+        - bw2data
       pip_check: true
 
 about:

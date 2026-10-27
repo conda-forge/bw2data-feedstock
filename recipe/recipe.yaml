@@ -1,0 +1,66 @@
+context:
+  version: "4.8"
+
+package:
+  name: bw2data
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/b/bw2data/bw2data-${{ version }}.tar.gz
+  sha256: 64fb8e8d08033ccdfff2cbd8af9430a7ea894a784c21a55dcd4db087e4d791fe
+
+build:
+  noarch: python
+  script: python -m pip install . -vv
+  number: 0
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools >=68.0
+  run:
+    - blinker
+    - bw_processing >=1.6
+    - bw2parameters
+    - deepdiff >=8.6.2
+    - deprecated
+    - fsspec
+    - lxml
+    - numpy <3
+    - packaging
+    - peewee >=4.0.1
+    - pint
+    - platformdirs
+    - pydantic-settings
+    - python >=${{ python_min }}
+    - rapidfuzz
+    - scipy
+    - snowflake-id >=1.0.2,<1.1
+    - stats_arrays
+    - structlog
+    - tqdm
+    - typing_extensions
+    - voluptuous
+    - wrapt
+
+tests:
+  - python:
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+      imports:
+        - bw2data
+      pip_check: true
+
+about:
+  homepage: https://github.com/brightway-lca/brightway2-data
+  summary: 'Tools for the management of inventory databases and impact assessment methods. Part of the Brightway2 LCA Framework.'
+  license: BSD-3-Clause
+  license_file: LICENSE
+  repository: https://github.com/brightway-lca/brightway2-data
+
+extra:
+  recipe-maintainers:
+    - cmutel
+    - m-rossi
